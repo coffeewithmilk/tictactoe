@@ -15,4 +15,8 @@ public class Square {
 		this.player = player;
 	}
 
+	public Player getPlayer() {
+		return player;
+	}
+
 }
