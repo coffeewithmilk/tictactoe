@@ -18,18 +18,17 @@ public class PlayerTest {
 
 	@Test
 	public void constructorShouldThrowOnNull() {
-		try {
-			player = new Player(null);
-			fail();
-		} catch(IllegalArgumentException e) {
-
-		}
+		constructorShouldThrowOn(null);
 	}
 
 	@Test
-	public void constructorShoudlThrowOnEmpty() {
+	public void constructorShouldThrowOnEmpty() {
+		constructorShouldThrowOn("");
+	}
+	
+	private void constructorShouldThrowOn(String input) {
 		try {
-			player = new Player("");
+			player = new Player(input);
 			fail();
 		} catch(IllegalArgumentException e) {
 
