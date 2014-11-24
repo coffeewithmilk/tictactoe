@@ -1,11 +1,13 @@
 package tictactoe;
 
+import javax.swing.JPanel;
+
 /**
  * 
  * @author DavidSjogren
  *
  */
-public class Square {
+public class Square extends JPanel {
 	private Player player;
 
 	public void setPlayer(Player player) throws IllegalArgumentException {
