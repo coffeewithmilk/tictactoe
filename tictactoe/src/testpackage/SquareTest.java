@@ -28,7 +28,7 @@ public class SquareTest {
 	
 	@Test
 	public void testGetPlayer() {
-		Player player = square.getPlayer();
+		square.getPlayer();
 	}
 
 }
