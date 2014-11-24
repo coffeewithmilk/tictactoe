@@ -3,7 +3,11 @@ package tictactoe;
 public class Player {
 
 	public Player(String name) throws IllegalArgumentException {
-		throw new IllegalArgumentException();
+		if(name != null) {
+
+		} else {
+			throw new IllegalArgumentException();
+		}
 	}
-	
+
 }
