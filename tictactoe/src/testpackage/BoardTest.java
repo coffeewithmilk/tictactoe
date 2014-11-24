@@ -29,9 +29,15 @@ public class BoardTest {
 	private void constructShouldThrowOn(Square[][] input) {
 		try {
 			board = new Board(input);
+			fail();
 		} catch (IllegalArgumentException e) {
 
 		}
+	}
+	
+	@Test
+	public void testGetWinner() {
+		board.getWinner();
 	}
 
 }

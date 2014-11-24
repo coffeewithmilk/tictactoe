@@ -20,7 +20,6 @@ public class SquareTest {
 	public void setPlayerShouldThrowOnNullArg() {
 		try {
 			square.setPlayer(null);
-			fail();
 		} catch (IllegalArgumentException e) {
 			
 		}

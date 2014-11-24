@@ -3,15 +3,18 @@ package tictactoe;
 import javax.swing.JPanel;
 
 public class Board extends JPanel {
-	private final int SIZE = 190;
+	private Square[][] squares;
 
 	public Board(Square[][] squares) throws IllegalArgumentException {
-		if(squares == null || squares.length != 3 || squares[0].length != 3) {
+		if(squares == null || squares.length != 3) {			
 			throw new IllegalArgumentException();
 		}
-
+		for(int i = 0; i < squares.length; i++) {
+			if(squares[i].length != 3) {
+				throw new IllegalArgumentException();
+			}
+		}
+	
 	}
-
-
 
 }
