@@ -12,11 +12,7 @@ public class BoardTest {
 
 	@Test
 	public void constructShouldThrowOnNullArg() {
-		try {
-			board = new Board(null);
-		} catch (IllegalArgumentException e) {
-
-		}
+		constructShouldThrowOn(null);
 	}
 
 	@Test
@@ -27,9 +23,12 @@ public class BoardTest {
 				input[i][j] = new Square();
 			}
 		}
+		constructShouldThrowOn(input);
+	}
+	
+	private void constructShouldThrowOn(Square[][] input) {
 		try {
 			board = new Board(input);
-			fail();
 		} catch (IllegalArgumentException e) {
 
 		}
