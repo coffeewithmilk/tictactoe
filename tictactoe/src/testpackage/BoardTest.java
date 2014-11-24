@@ -35,7 +35,7 @@ public class BoardTest {
 
 		}
 	}
-
+	
 	@Test
 	public void testGetWinner() {	
 		Board b = new Board(createSquares(3, 3, false));
