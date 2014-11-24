@@ -17,4 +17,8 @@ public class Board extends JPanel {
 	
 	}
 
+	public Player getWinner() {
+		return new Player("asdf");
+	}
+
 }

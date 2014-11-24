@@ -36,8 +36,19 @@ public class BoardTest {
 	}
 	
 	@Test
-	public void testGetWinner() {
-		board.getWinner();
+	public void testGetWinner() {	
+		Board b = createBoard();
+		b.getWinner();
+	}
+	
+	private Board createBoard() {
+		Square[][] input = new Square[3][3];
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				input[i][j] = new Square();
+			}
+		}
+		return new Board(input);
 	}
 
 }
