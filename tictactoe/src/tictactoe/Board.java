@@ -13,7 +13,13 @@ public class Board extends JPanel {
 			if(squares[i].length != 3) {
 				throw new IllegalArgumentException();
 			}
+			for(int j = 0; j < squares[i].length; j++) {
+				if(squares[i][j] == null) {
+					throw new IllegalArgumentException();
+				}
+			}
 		}
+		
 		
 	
 	}
