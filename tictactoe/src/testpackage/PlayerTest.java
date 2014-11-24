@@ -9,7 +9,9 @@ import tictactoe.Player;
 
 public class PlayerTest {
 	private Player player;
-
+	
+	private final String EMPTY_STRING = "";
+	private final String STRING_26_LENGTH = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	@Before
 	public void setup() {
@@ -23,7 +25,12 @@ public class PlayerTest {
 
 	@Test
 	public void constructorShouldThrowOnEmpty() {
-		constructorShouldThrowOn("");
+		constructorShouldThrowOn(EMPTY_STRING);
+	}
+	
+	@Test
+	public void constructorShouldThrowOnTooLong() {
+		constructorShouldThrowOn(STRING_26_LENGTH);
 	}
 	
 	private void constructorShouldThrowOn(String input) {
