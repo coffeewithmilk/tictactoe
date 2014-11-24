@@ -14,10 +14,12 @@ public class Board extends JPanel {
 				throw new IllegalArgumentException();
 			}
 		}
+		
 	
 	}
 
 	public Player getWinner() {
+		//TODO implement algorithm that checks if any player has won and return it.
 		return new Player("asdf");
 	}
 
