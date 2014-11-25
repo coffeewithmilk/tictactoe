@@ -37,18 +37,17 @@ public class PlayerTest {
 
 	@Test
 	public void setColorShouldBeRedOrBlue() {
-		try {
-			player.setColor(Color.white);
-			fail();
-		} catch (IllegalArgumentException e) {
-
-		}
+		setColorShouldThrowOn(Color.white);
 	}
 
 	@Test
 	public void setColorShouldThrowOnNull() {
+		setColorShouldThrowOn(null);
+	}
+	
+	private void setColorShouldThrowOn(Color input) {
 		try {
-			player.setColor(null);
+			player.setColor(input);
 		} catch (IllegalArgumentException e) {
 
 		}
