@@ -18,7 +18,9 @@ public class Player {
 	}
 
 	public void setColor(Color c) throws IllegalArgumentException {
-		throw new IllegalArgumentException();
+		if(!c.equals(Color.blue) || !c.equals(Color.red)) {
+			throw new IllegalArgumentException("Can only be Color.blue or Color.red");
+		}
 	}
 
 }
