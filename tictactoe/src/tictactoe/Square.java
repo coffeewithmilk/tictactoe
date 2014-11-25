@@ -27,7 +27,7 @@ public class Square extends JPanel {
 			throw new IllegalArgumentException();
 		}
 		this.player = player;
-		
+		this.setBackground(player.getColor());
 		
 	}
 	
