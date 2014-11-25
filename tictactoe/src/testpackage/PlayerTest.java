@@ -11,7 +11,7 @@ import tictactoe.Player;
 
 public class PlayerTest {
 	private Player player;
-	
+
 	private final String EMPTY_STRING = "";
 	private final String STRING_26_LENGTH = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -29,22 +29,27 @@ public class PlayerTest {
 	public void constructorShouldThrowOnEmpty() {
 		constructorShouldThrowOn(EMPTY_STRING);
 	}
-	
+
 	@Test
 	public void constructorShouldThrowOnTooLong() {
 		constructorShouldThrowOn(STRING_26_LENGTH);
 	}
-	
+
 	@Test
 	public void setColorShouldBeRedOrBlue() {
-		player.setColor(Color.white);
+		try {
+			player.setColor(Color.white);
+			fail();
+		} catch (IllegalArgumentException e) {
+
+		}
 	}
-	
+
 	@Test
 	public void testGetName() {
 		player.getName();
 	}
-	
+
 	private void constructorShouldThrowOn(String input) {
 		try {
 			new Player(input);
