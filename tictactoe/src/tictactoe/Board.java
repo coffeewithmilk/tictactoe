@@ -5,6 +5,10 @@ import java.awt.Point;
 import javax.swing.JPanel;
 
 public class Board extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5352070910719656881L;
 	private Square[][] squares;
 
 	public Board(Square[][] squares) throws IllegalArgumentException {
