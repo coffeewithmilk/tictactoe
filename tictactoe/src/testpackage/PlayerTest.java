@@ -15,7 +15,7 @@ public class PlayerTest {
 
 	@Before
 	public void setup() {
-
+		player = new Player("FOO_FUU");
 	}
 
 	@Test
@@ -33,9 +33,14 @@ public class PlayerTest {
 		constructorShouldThrowOn(STRING_26_LENGTH);
 	}
 	
+	@Test
+	public void testGetName() {
+		player.getName();
+	}
+	
 	private void constructorShouldThrowOn(String input) {
 		try {
-			player = new Player(input);
+			new Player(input);
 			fail();
 		} catch(IllegalArgumentException e) {
 

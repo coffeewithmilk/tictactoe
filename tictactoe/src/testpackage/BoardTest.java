@@ -8,8 +8,7 @@ import tictactoe.Board;
 import tictactoe.Square;
 
 public class BoardTest {
-	private Board board;
-
+	
 	@Test
 	public void constructShouldThrowOnNullArg() {
 		constructShouldThrowOn(null);
@@ -29,7 +28,7 @@ public class BoardTest {
 
 	private void constructShouldThrowOn(Square[][] input) {
 		try {
-			board = new Board(input);
+			new Board(input);
 			fail();
 		} catch (IllegalArgumentException e) {
 
