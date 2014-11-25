@@ -171,5 +171,6 @@ public class Tictactoe {
 	}
 
 	public void winGame(Player p) {
+		JOptionPane.showMessageDialog(null, "Player: '" + p.getName() + "' won! Congratulations!");
 	}
 }
