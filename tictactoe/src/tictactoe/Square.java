@@ -23,7 +23,7 @@ public class Square extends JPanel {
 	}
 	
 	public void setPlayer(Player player) throws IllegalArgumentException {
-		if(player == null) {
+		if(player == null || this.player != null) {
 			throw new IllegalArgumentException();
 		}
 		this.player = player;
