@@ -35,8 +35,7 @@ public class SquareTest {
 
 		}
 	}
-
-
+	
 	@Test
 	public void testGetPlayer() {
 		square.getPlayer();
