@@ -45,6 +45,11 @@ public class PlayerTest {
 		setColorShouldThrowOn(null);
 	}
 	
+	@Test
+	public void testGetColor() {
+		player.getColor();
+	}
+	
 	private void setColorShouldThrowOn(Color input) {
 		try {
 			player.setColor(input);

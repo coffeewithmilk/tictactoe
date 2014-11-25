@@ -28,6 +28,7 @@ public class Square extends JPanel {
 		}
 		this.player = player;
 		
+		
 	}
 	
 	private void setupPanel() {

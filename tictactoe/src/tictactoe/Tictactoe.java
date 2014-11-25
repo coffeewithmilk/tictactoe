@@ -54,7 +54,7 @@ public class Tictactoe {
 		}
 		Player p = board.getWinner();
 		if(p != null) {
-			//winGame(p);
+			winGame(p);
 		}
 	}
 	
