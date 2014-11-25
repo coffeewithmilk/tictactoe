@@ -18,25 +18,25 @@ public class SquareTest {
 
 	@Test
 	public void setPlayerShouldThrowOnNullArg() {
-		try {
-			square.setPlayer(null);
-		} catch (IllegalArgumentException e) {
-
-		}
+		setPlayerShouldThrowWhen(null);
 	}
 
 	@Test
 	public void setPlayerShouldThrowWhenPlayerIsAlreadySet() {
 		square.setPlayer(new Player("asdf"));
+		setPlayerShouldThrowWhen(new Player("fda"));
+	}
+
+	private void setPlayerShouldThrowWhen(Player input) {
 		try {
-			square.setPlayer(new Player("fdsa"));
+			square.setPlayer(input);
 			fail();
 		} catch (IllegalArgumentException e) {
 
 		}
 	}
-	
-	
+
+
 	@Test
 	public void testGetPlayer() {
 		square.getPlayer();
