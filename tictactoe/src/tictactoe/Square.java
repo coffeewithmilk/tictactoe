@@ -17,18 +17,22 @@ public class Square extends JPanel {
 	private Player player;
 	private final int SIZE = 190;
 
+	public Square() {
+		setupPanel();
+	}
+	
 	public void setPlayer(Player player) throws IllegalArgumentException {
 		if(player == null) {
 			throw new IllegalArgumentException();
 		}
 		this.player = player;
-		setupPanel();
+		
 	}
 	
 	private void setupPanel() {
-		this.setPreferredSize(new Dimension(SIZE, SIZE));
+		setPreferredSize(new Dimension(SIZE, SIZE));
 	}
-
+	
 	public Player getPlayer() {
 		return player;
 	}
