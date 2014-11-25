@@ -47,7 +47,11 @@ public class PlayerTest {
 
 	@Test
 	public void setColorShouldThrowOnNull() {
-		player.setColor(null);
+		try {
+			player.setColor(null);
+		} catch (IllegalArgumentException e) {
+
+		}
 	}
 
 	@Test
