@@ -34,12 +34,12 @@ public class PlayerTest {
 	public void constructorShouldThrowOnTooLong() {
 		constructorShouldThrowOn(STRING_26_LENGTH);
 	}
-	/*
+	
 	@Test
 	public void setColorShouldBeRedOrBlue() {
 		player.setColor(Color.white);
 	}
-	*/
+	
 	@Test
 	public void testGetName() {
 		player.getName();
