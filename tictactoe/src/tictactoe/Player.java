@@ -1,5 +1,7 @@
 package tictactoe;
 
+import java.awt.Color;
+
 public class Player {
 
 	private String name;
@@ -13,6 +15,10 @@ public class Player {
 
 	public String getName() {
 		return name;
+	}
+	
+	public void setColor(Color c) throws IllegalArgumentException {
+		throw new IllegalArgumentException();
 	}
 
 }

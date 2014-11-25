@@ -1,5 +1,6 @@
 package tictactoe;
 
+import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JPanel;
@@ -31,6 +32,7 @@ public class Square extends JPanel {
 	
 	private void setupPanel() {
 		setPreferredSize(new Dimension(SIZE, SIZE));
+		setBackground(Color.white);
 	}
 	
 	public Player getPlayer() {

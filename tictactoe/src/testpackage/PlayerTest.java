@@ -2,6 +2,8 @@ package testpackage;
 
 import static org.junit.Assert.fail;
 
+import java.awt.Color;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -32,7 +34,12 @@ public class PlayerTest {
 	public void constructorShouldThrowOnTooLong() {
 		constructorShouldThrowOn(STRING_26_LENGTH);
 	}
-	
+	/*
+	@Test
+	public void setColorShouldBeRedOrBlue() {
+		player.setColor(Color.white);
+	}
+	*/
 	@Test
 	public void testGetName() {
 		player.getName();

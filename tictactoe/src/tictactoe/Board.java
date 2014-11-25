@@ -1,5 +1,7 @@
 package tictactoe;
 
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Point;
 
 import javax.swing.JPanel;
@@ -10,6 +12,7 @@ public class Board extends JPanel {
 	 */
 	private static final long serialVersionUID = -5352070910719656881L;
 	private Square[][] squares;
+	private final int SIZE = 600;
 
 	public Board(Square[][] squares) throws IllegalArgumentException {
 		if(squares == null || squares.length != 3) {			
@@ -27,7 +30,18 @@ public class Board extends JPanel {
 		}
 
 		this.squares = squares;		
+		setupPanel();
 
+	}
+	
+	private void setupPanel() {
+		this.setPreferredSize(new Dimension(SIZE, SIZE));
+		this.setBackground(Color.gray);
+		for(int i = 0; i < squares.length; i++) {
+			for(int j = 0; j < squares[i].length; j++) {
+				add(squares[i][j]);
+			}
+		}
 	}
 
 	public Player getWinner() {

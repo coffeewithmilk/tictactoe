@@ -3,7 +3,8 @@ package tictactoe;
 public class Main {
 	
 	public static void main(String[] args) {
-		new Tictactoe();
+		Tictactoe ttt = new Tictactoe();
+		ttt.start();
 	}
 
 }
