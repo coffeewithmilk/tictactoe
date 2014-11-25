@@ -50,6 +50,10 @@ public class Tictactoe {
 		} else {
 			currentPlayer = player1;
 		}
+		Player p = board.getWinner();
+		if(p != null) {
+			//winGame(p);
+		}
 	}
 	
 	private void setMouseListenersForSquares(Square[][] sqs) {
