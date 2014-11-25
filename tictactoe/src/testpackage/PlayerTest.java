@@ -46,6 +46,11 @@ public class PlayerTest {
 	}
 
 	@Test
+	public void setColorShouldThrowOnNull() {
+		player.setColor(null);
+	}
+
+	@Test
 	public void testGetName() {
 		player.getName();
 	}
